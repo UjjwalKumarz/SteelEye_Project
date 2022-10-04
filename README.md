@@ -9,12 +9,13 @@ One final word of warning - at a startup like SteelEye you will regularly gather
 
 And one final tip: KISS – Keep It Short and Simple. Don’t overcomplicate it, make it simple, efficient, easy to maintain and easy for the user to use.
 
-Brief:
+### Brief:
 
 The requirement needs to be developed in Python 3
 Code should follow pep8 standards and should include pydoc, logging & unit tests
 Please provide github link for review.
-Requirement:
+
+### Requirement:
 
 Download the xml from this link
 From the xml, please parse through to the first download link whose file_type is DLTINS and download the zip
@@ -28,7 +29,8 @@ FinInstrmGnlAttrbts.NtnlCcy
 Issr
 Store the csv from step 4) in an AWS S3 bucket
 The above function should be run as an AWS Lambda (Optional)
-Assessment criteria:
+
+### Assessment criteria:
 
 Percentage of requirements satisfied
 How clean the code is - in particular simplicity, adhering to python code style conventions and error handling.
