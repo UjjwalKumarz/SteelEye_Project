@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>main</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Clenovo%5Cpycharmprojects%5Csteeleye_project%5Cmain.py">c:\users\lenovo\pycharmprojects\steeleye_project\main.py</a></font></td></tr></table>
+    <p><tt>importing&nbsp;different&nbsp;modules&nbsp;and&nbsp;packages&nbsp;which&nbsp;are&nbsp;required</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="logging.html">logging</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="main.html#SteelEye">SteelEye</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="SteelEye">class <strong>SteelEye</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#SteelEye">SteelEye</a>(custom_logger=None)<br>
+&nbsp;<br>
+class&nbsp;<a href="#SteelEye">SteelEye</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="SteelEye-__init__"><strong>__init__</strong></a>(self, custom_logger=None)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="SteelEye-bs_to_csv"><strong>bs_to_csv</strong></a>(self, bs_content)</dt><dd><tt>This&nbsp;function&nbsp;will&nbsp;first&nbsp;find&nbsp;the&nbsp;required&nbsp;data&nbsp;in&nbsp;different&nbsp;lists<br>
+from&nbsp;the&nbsp;BeautifulSoup&nbsp;file&nbsp;which&nbsp;was&nbsp;generated&nbsp;from&nbsp;the&nbsp;xml&nbsp;file.<br>
+After&nbsp;that,&nbsp;converting&nbsp;all&nbsp;the&nbsp;data&nbsp;into&nbsp;pandas&nbsp;DataFrame.<br>
+Then,&nbsp;this&nbsp;function&nbsp;will&nbsp;create&nbsp;a&nbsp;Output.csv&nbsp;file&nbsp;in&nbsp;the&nbsp;current<br>
+directory.<br>
+:param&nbsp;&nbsp;bs_content:&nbsp;xml&nbsp;file&nbsp;converted&nbsp;into&nbsp;BeautifulSoup&nbsp;file<br>
+:type&nbsp;&nbsp;&nbsp;bs_content:&nbsp;bs4.BeautifulSoup</tt></dd></dl>
+
+<dl><dt><a name="SteelEye-extract_zip"><strong>extract_zip</strong></a>(self, zip_link: str)</dt><dd><tt>This&nbsp;function&nbsp;is&nbsp;first&nbsp;fetching&nbsp;the&nbsp;zip&nbsp;file,&nbsp;then&nbsp;extracting&nbsp;the<br>
+file&nbsp;present&nbsp;in&nbsp;it.<br>
+After&nbsp;that&nbsp;it&nbsp;is&nbsp;returning&nbsp;a&nbsp;list&nbsp;which&nbsp;contains&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;files<br>
+present&nbsp;in&nbsp;the&nbsp;zip.<br>
+:param&nbsp;&nbsp;zip_link:&nbsp;link&nbsp;to&nbsp;fetch&nbsp;zip&nbsp;file<br>
+:type&nbsp;&nbsp;&nbsp;zip_link:&nbsp;str<br>
+:return&nbsp;file_names&nbsp;(list&nbsp;of&nbsp;strings)</tt></dd></dl>
+
+<dl><dt><a name="SteelEye-find_zip_link"><strong>find_zip_link</strong></a>(self, data)</dt><dd><tt>This&nbsp;function&nbsp;will&nbsp;find&nbsp;the&nbsp;correct&nbsp;link&nbsp;from&nbsp;the&nbsp;data&nbsp;which&nbsp;was<br>
+fetched&nbsp;from&nbsp;<a href="#SteelEye-load_data">load_data</a>()&nbsp;function<br>
+:param&nbsp;&nbsp;data:&nbsp;xml&nbsp;file&nbsp;converted&nbsp;into&nbsp;BeautifulSoup&nbsp;file<br>
+:type&nbsp;&nbsp;&nbsp;data:&nbsp;bs4.BeautifulSoup<br>
+:return&nbsp;zip_link:&nbsp;link&nbsp;in&nbsp;form&nbsp;of&nbsp;string</tt></dd></dl>
+
+<dl><dt><a name="SteelEye-load_data"><strong>load_data</strong></a>(self)</dt><dd><tt>This&nbsp;function&nbsp;will&nbsp;load&nbsp;data&nbsp;from&nbsp;the&nbsp;xml&nbsp;link&nbsp;as&nbsp;bs4.BeautifulSoup<br>
+&nbsp;file<br>
+:return&nbsp;data:&nbsp;xml&nbsp;file&nbsp;converted&nbsp;into&nbsp;BeautifulSoup&nbsp;file</tt></dd></dl>
+
+<dl><dt><a name="SteelEye-read_xml_doc"><strong>read_xml_doc</strong></a>(self, file_name)</dt><dd><tt>This&nbsp;function&nbsp;opens&nbsp;the&nbsp;xml&nbsp;file&nbsp;and&nbsp;encodes&nbsp;it.<br>
+After&nbsp;that&nbsp;it&nbsp;returns&nbsp;a&nbsp;bs4.BeautifulSoup&nbsp;file&nbsp;which&nbsp;contains&nbsp;all&nbsp;the<br>
+encoded&nbsp;data&nbsp;of&nbsp;the&nbsp;xml&nbsp;file.<br>
+:param&nbsp;&nbsp;file_name:&nbsp;name&nbsp;of&nbsp;the&nbsp;xml&nbsp;document<br>
+:type&nbsp;&nbsp;&nbsp;file_name:&nbsp;str<br>
+:return&nbsp;bs_content:&nbsp;xml&nbsp;file&nbsp;converted&nbsp;into&nbsp;BeautifulSoup&nbsp;file</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
